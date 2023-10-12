@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo</title>
+</head>
+<body>
+
+<script>
+    function pulaLinha() {
+        document.write("<br><br>")
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+    }
+
+    var ano = 2016;
+
+    document.write("Flávio tem " + (ano - 1977) + " anos");
+    pulaLinha();
+    document.write("Joaquim tem " + (ano - 1977) + " anos");
+    pulaLinha();
+
+    ano = 2017;
+    document.write("Barney tem " + (ano - 1977) + " anos");
+    pulaLinha();
+
+    var idadeFlavio = 39;
+    var idadeJoaquim = 20;
+    var idadeBarney = 41;
+
+    var media = (idadeFlavio + idadeJoaquim + idadeBarney) / 3;
+
+    document.write("A média das idades é " + Math.round(media));
+
+    var nome = "Flávio";
+
+    pulaLinha();
+    document.write("A idade de " + nome + " é " + idadeFlavio);
+
+    document.write("<hr>");
+
+    var ano = 2016;
+
+    mostrar("Flávio tem " + (ano - 1977) + " anos");
+
+    pulaLinha();
+
+    mostrar("Joaquim tem " + (ano - 1977) + " anos");
+    
+    pulaLinha();
+
+    ano = 2017;
+
+    mostrar("Barney tem " + (ano - 1977) + " anos");
+
+    pulaLinha();
+    
+</script>
+
+</body>
+</html>
