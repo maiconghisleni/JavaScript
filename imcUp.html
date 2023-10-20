@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    <head>
-        <script>
-             function calculaImc3(peso, altura) {
-            return   peso / (altura * altura);
-        }
-
-        function submit(){
-            console.log("teste");
-            var peso = document.getElementById("peso").value
-            var altura = document.getElementById("altura").value
-            var imc = calculaImc3 (peso, altura)
-            var statusImc = pegaStatusImc(imc)
-            document.getElementById("resultado").innerHTML=`imc: ${imc} status: ${statusImc}`
-        }
-
-        function pegaStatusImc (imc){
-            if (imc < 18.5){
-                return "Abaixo do peso";
-            }
-
-            if (imc >= 18.5 && imc<= 24.9){
-                return " Peso ideal";
-            }
-
-            if (imc >= 25.0 && imc <=29.9){
-                return "Levemente acima do peso";
-            }
-
-            if (imc >= 30.0 && imc<= 34.9){
-                return "Obesidade grau 1";   
-            }
-
-            if (imc >= 35.0 && imc<= 39.9){
-                return "Obesidade grau 2 (severa)";
-            }
-
-            if (imc > 40.0){
-                return "Obesidade grau 3 (mórbida)";
-                
-            }
-        }
-
-        </script>
-    </head>
+    <title>IMC</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
-    <body>
-        peso  <input id="peso" type="number">
-        <br>
-        altura  <input id="altura" type="number">
-        <br>
-        <button onclick="submit()">
-            calcular
-        </button>
-    <p id="resultado"></p>
-</body>
+<body> 
+            <script>
+                 function calculaImc3(peso, altura) {
+                return   peso / (altura * altura);
+            }
+            function submit() {
+                var peso = parseFloat(document.getElementById("peso").value);
+                var altura = parseFloat(document.getElementById("altura").value);
+
+                if (peso < 0 || altura < 0) {
+                    document.getElementById("resultado").innerHTML = "Valores negativos não são permitidos";
+                } else {
+                    var imc = calculaImc3(peso, altura);
+                    var statusImc = pegaStatusImc(imc);
+                    document.getElementById("resultado").innerHTML = `IMC: ${imc} Status: ${statusImc}`;
+                }
+            }
+
+            function pegaStatusImc (imc){
+                if (imc < 18.5){
+                    return "Abaixo do peso";
+                }
+                if (imc >= 18.5 && imc<= 24.9){
+                    return " Peso ideal";
+                }
+                if (imc >= 25.0 && imc <=29.9){
+                    return "Levemente acima do peso";
+                }
+                if (imc >= 30.0 && imc<= 34.9){
+                    return "Obesidade grau 1";
+                }
+                if (imc >= 35.0 && imc<= 39.9){
+                    return "Obesidade grau 2 (severa)";
+                }
+                if (imc > 40.0){
+                    return "Obesidade grau 3 (mórbida)";
+            
+                }
+            }
+            </script>
+            <h1>Calculo de IMC 🍔</h1>
+            <div>
+                <p class="p1">Peso (kg):</p> <input id="peso" type="number" >
+                <br>
+                <p class="p1">Altura (m):</p> <input id="altura" type="number">
+                <article>
+                    <button onclick="submit()">
+                        Calcular
+                    </button>
+                </article>
+                <footer>
+                    <p id="resultado"></p>
+                </footer>
+            </div>
+</body>  
+</head>
 </html>
