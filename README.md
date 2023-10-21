@@ -7,6 +7,6 @@
 <br>
 <a href="https://maiconghisleni.github.io/JavaScript/projeto2/alr2imc.html">Projeto 02</a>
 <br>
-<a href="https://maiconghisleni.github.io/JavaScript/projeto3/alr3imc.html">Projeto 03</a>
+<a href="https://maiconghisleni.github.io/JavaScript/projeto3/alr3.html">Projeto 03</a>
 <br>
 <a href="https://maiconghisleni.github.io/JavaScript/projeto4/alr4adv.html">Projeto 04</a>
